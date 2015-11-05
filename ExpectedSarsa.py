@@ -53,22 +53,18 @@ for episodeNum in range(numEpisodes):
             
 	#print "Episode: ", episodeNum, "Return: ", G
     returnSum = returnSum + G
-    if(episodeNum%10000 == 0 and episodeNum != 0):
+    if(episodeNum%10000 == 0 and episodeNum != 0 and episodeNum != learningEpisodes):
         if episodeNum < learningEpisodes:
            #Print the running average while learning 
            print "Average return ",episodeNum,": ", returnSum/episodeNum
         else:
            #Print the average of just the episodes used in evaluation mode (non-learning)
-           print "Average return ",episodeNum,": ", returnSum/episodeNum-learningEpisodes
+           print "Average return ",episodeNum,": ", returnSum/(episodeNum-learningEpisodes)
 
     if episodeNum == learningEpisodes: 
         epsilon = epsilonPi
         alpha = 0
         blackjack.printPolicy(returnPolicy)
-        
-    #Different if statement because python seemed to be getting sleep and print out of order
-    if episodeNum == learningEpisodes: 
-        time.sleep(2)
     
 print "Average return: ", returnSum/numEpisodes
 #Print the policy
