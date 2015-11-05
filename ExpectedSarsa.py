@@ -1,16 +1,21 @@
+"""
+Written Assignment 1: CMPUT 366
+
+Written by Peter Sterling, Eric Smith: November 5, 2015 
+
+"""
 import blackjack
 from pylab import *
 import numpy as n
-import time
 
-evaluationEpisodes = 1000000
-learningEpisodes = 1000000
+evaluationEpisodes = 3000000
+learningEpisodes = 3000000
 numEpisodes = evaluationEpisodes + learningEpisodes
 
 states = 0.00001*n.random.rand(181,2)
-epsilonMu = 0.01
+epsilonMu = 0.2
 epsilonPi = 0.0
-alpha = 0.001
+alpha = 0.0005
 discount = 1
 epsilon = epsilonMu
 

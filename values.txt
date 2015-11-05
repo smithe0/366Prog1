@@ -45,8 +45,98 @@ epsilonPi = 0.0
 alpha = 0.0005
 	final learned: -0.0868707070707
 	final result: -0.033596
-
+	
 epsilonMu = 0.15
 epsilonPi = 0.0
 alpha = 0.0005
  -0.0332903333333
+ 
+ epsilonMu = 0.1
+epsilonPi = 0.0
+alpha = 0.001
+
+Average return:  -0.036317
+
+epsilonMu = 0.15
+epsilonPi = 0.0
+alpha = 0.0005
+
+Average return:  -0.032602, -0.038982
+
+epsilonMu = 0.15
+epsilonPi = 0.0
+alpha = 0.001
+
+Average return:  -0.035018
+
+epsilonMu = 0.15
+epsilonPi = 0.0
+alpha = 0.005
+
+Average return:  -0.034 -0.035
+
+epsilonMu = 0.15
+epsilonPi = 0.0
+alpha = 0.003
+
+Average return:  -0.040468
+
+epsilonMu = 0.2
+epsilonPi = 0.0
+alpha = 0.0005
+
+Average return:  -0.034194 (Trial 1)
+Average return:  -0.033047 (Trial 1)
+
+epsilonMu = 0.15
+epsilonPi = 0.0
+alpha = 0.001
+
+Average return:  -0.03537
+
+evaluationEpisodes = 10000000
+learningEpisodes = 10000000
+epsilonMu = 0.15
+epsilonPi = 0.0
+alpha = 0.00075
+
+Average return:  -0.0363762
+
+evaluationEpisodes = 3000000
+learningEpisodes = 3000000
+epsilonMu = 0.15
+epsilonPi = 0.0
+alpha = 0.0005
+
+Average return:  -0.034236
+
+-------------------------------------------------------------
+
+Average return:  -0.032534
+
+ Usable Ace:
+S S S H S S H S S S 20
+S S S S S H S S S S 19
+S H H H S S S S H S 18
+H H H H S S H H H H 17
+H H H H H H H H H H 16
+H H H H H H H H H H 15
+H H H H H H H H H H 14
+H H H H H H H H H H 13
+H H H H H H H H H H 12
+1 2 3 4 5 6 7 8 9 10
+
+ No Usable Ace:
+S S S S S S S S S S 20
+S S S S S S S S S S 19
+S S S S S S S S S S 18
+S S S S S S S S S S 17
+H S S S S S S H H H 16
+H S S S S H H H H H 15
+H H S S S H H H H H 14
+H H H S S H H H H H 13
+H H H H H H H H H H 12
+1 2 3 4 5 6 7 8 9 10
+
+
+
