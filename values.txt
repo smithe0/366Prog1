@@ -1,0 +1,52 @@
+epsilonMu = 0.03
+epsilonPi = 0.0
+alpha = 0.005
+	final learned: -0.04598
+	final result: -0.037914
+	
+epsilonMu = 0.5
+epsilonPi = 0.0
+alpha = 0.005
+	final learned: -0.1843
+	final result: -0.04254
+	
+epsilonMu = 0.5
+epsilonPi = 0.0
+alpha = 0.01
+	final learned: -0.1856
+	final result: -0.046592
+
+epsilonMu = 0.001
+epsilonPi = 0.0
+alpha = 0.01
+	final learned: -0.0393676767677
+	final result: -0.039387
+	
+epsilonMu = 0.15
+epsilonPi = 0.0
+alpha = 0.05
+	final learned: -0.0956666666667
+	final result: -0.053007
+
+epsilonMu = 0.15
+epsilonPi = 0.0
+alpha = 0.005
+	final learned: -0.0837545454545
+	final result:  -0.034841
+
+epsilonMu = 0.15
+epsilonPi = 0.0
+alpha = 0.001
+	final learned: -0.0825272727273
+	final result: -0.033583
+	
+epsilonMu = 0.15
+epsilonPi = 0.0
+alpha = 0.0005
+	final learned: -0.0868707070707
+	final result: -0.033596
+
+epsilonMu = 0.15
+epsilonPi = 0.0
+alpha = 0.0005
+ -0.0332903333333
