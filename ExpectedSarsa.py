@@ -67,6 +67,6 @@ for episodeNum in range(numEpisodes):
         returnSum = 0.0
         blackjack.printPolicy(returnPolicy)
     
-print "Average return: ", returnSum/numEpisodes
+print "Average return: ", returnSum/evaluationEpisodes
 #Print the policy
 blackjack.printPolicy(returnPolicy)
