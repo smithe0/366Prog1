@@ -1,11 +1,11 @@
 import blackjack
 from pylab import *
-from numpy import *
+import numpy as n
 
 numEpisodes = 1000000
 
-states = 0.00001*rand(181,2)
-epsilonbehavior = 0.01
+states = 0.00001*n.random.rand(181,2)
+epsilonbehavior = 1.00
 epsilontarget = 0.01
 alpha = 0.001
 discount = 1
@@ -22,9 +22,9 @@ for episodeNum in range(numEpisodes):
     #Continue this game until the terminal state is reached
     while(currentstate != -1):
         #Get a random number between 0 and 1, if its less than epsilon behavior, then explore
-        rnumber = random.rand()
+        rnumber = n.random.rand()
         if rnumber < epsilonbehavior:
-            action = random.randint(2)
+            action = n.random.randint(2)
         else:
 	    #If not exploring, pick the highest action at state S
             action = argmax(states[currentstate])       
@@ -54,4 +54,10 @@ for episodeNum in range(numEpisodes):
     returnSum = returnSum + G
     if(episodeNum%10000 == 0):
 	print "Average return ",episodeNum,": ", returnSum/numEpisodes
+
+
+def returnPolicy(self): return n.argmax(states[self]) #This took forever to come up with, but why does this work???? wtf?
+
 print "Average return: ", returnSum/numEpisodes
+#Print the policy
+blackjack.printPolicy(returnPolicy)
