@@ -64,7 +64,7 @@ for episodeNum in range(numEpisodes):
     if episodeNum == learningEpisodes: 
         epsilon = epsilonPi
         alpha = 0
-        returnSum = 0
+        returnSum = 0.0
         blackjack.printPolicy(returnPolicy)
     
 print "Average return: ", returnSum/numEpisodes
