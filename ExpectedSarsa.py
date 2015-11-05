@@ -5,8 +5,8 @@ import numpy as n
 numEpisodes = 1000000
 
 states = 0.00001*n.random.rand(181,2)
-epsilonbehavior = 1.00
-epsilontarget = 0.01
+epsilonMu = 1.00
+epsilonPi = 0.01
 alpha = 0.001
 discount = 1
 
@@ -23,7 +23,7 @@ for episodeNum in range(numEpisodes):
     while(currentstate != -1):
         #Get a random number between 0 and 1, if its less than epsilon behavior, then explore
         rnumber = n.random.rand()
-        if rnumber < epsilonbehavior:
+        if rnumber < epsilonMu:
             action = n.random.randint(2)
         else:
 	    #If not exploring, pick the highest action at state S
@@ -37,13 +37,13 @@ for episodeNum in range(numEpisodes):
         G = G + reward
         
         #Get chance of being greedy
-        greedychance = 1-epsilonbehavior
+        greedychance = 1-epsilonPi
         
         #Get best value at the next state
         highest = argmax(states[nextstate])
         
         #Expected sarsa calculation (greedy * best_next_state_action) + (explore * (0.5*next_state_action1 + 0.5*next_state_action2))
-        target = (greedychance * states[nextstate][highest]) + (epsilonbehavior * (0.5*states[nextstate][0] + 0.5*states[nextstate][1]))
+        target = (greedychance * states[nextstate][highest]) + (epsilonPi * (0.5*states[nextstate][0] + 0.5*states[nextstate][1]))
             
             
         states[currentstate][action] = states[currentstate][action] + alpha * (reward + target - states[currentstate][action]) 
